@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Firefox OS App</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="shared/style/headers.css">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="javascript.js"></script>
+<script>
+$(document).ready(function(){
+    $('#body_iframe').bind('shakeFrame',function(){
+        $('#body_iframe').effect("shake",{"times":3,"distance":10},60);
+    });
+});
+</script>
+<style>
+html,body {
+margin: 0;
+padding: 0;
+font-size: 10px;
+}
+</style>
+</head>
+<body role="application">
+<section role="region" class="skin-organic">
+<header>
+<h1 style="text-align:left;">Forkoora App</h1>
+</header>
+</section>
+<iframe mozallowfullscreen="true" id="body_iframe" src="body.html" class="body_iframe" ></iframe>
+</body>
+</html>

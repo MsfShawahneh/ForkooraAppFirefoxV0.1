@@ -1,0 +1,20 @@
+{
+  "name": "Forkoora App",
+  "launch_path": "/index.html",
+  "type": "web",
+  "description": "Forkoora.com News Video  Images",
+  "developer": {
+    "name": "Mohammad Shawahneh",
+    "url": "http://forkoora.com"
+  },
+  "icons": {
+    "128": "/images/1.png"
+  },
+  "permissions": {
+    "backgroundservice":{ "description": "Forkoora.com News Video  Images" },
+    "attention":{ "description": "Forkoora.com News Video  Images" },
+    "contacts":{ "access": "readwrite","description": "Forkoora.com News Video  Images" },
+    "settings":{ "access": "readwrite","description": "Forkoora.com News Video  Images" },
+    "desktop-notification":{ "description": "Forkoora.com News Video  Images" }
+  }
+}

@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="shared/style/headers.css">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="javascript.js"></script>
+<body role="application">
+<section role="region" class="skin-organic">
+<header>
+<h1>اختر فئة <input type="button" value="رجوع" ONCLICK="history.go(-1)"  /></h1>
+</header>
+<header>
+<h2><script>
+
+if (getUrlVars()["site"]==1)
+{
+document.write("برشلونة");	
+}else if (getUrlVars()["site"]==2){
+document.write("ريال مدريد");	
+}
+</script></h2>
+</header>
+</section>
+<ul class="Items">
+<script>
+
+
+document.write("<li><a href='items.html?site="+getUrlVars()["site"]+"&p=items&cat=news'>الاخبار</a></li><li><a href='items.html?site="+getUrlVars()["site"]+"&p=items&cat=video'>مقاطع الفيديو</a></li> <li><a href='items.html?site="+getUrlVars()["site"]+"&p=items&cat=images'>الصور</a></li>");	
+
+</script>
+
+</ul>
+</body>
+

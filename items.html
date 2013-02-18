@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="shared/style/headers.css">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="javascript.js"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.zrssfeed.js" type="text/javascript"></script>
+
+
+<body role="application">
+<section role="region" class="skin-organic">
+<header>
+<h1>اختر احد العناصر <input type="button" value="رجوع" ONCLICK="history.go(-1)"  /></h1>
+</header>
+<header>
+<h2><script>
+
+if (getUrlVars()["site"]==1)
+{
+document.write("برشلونة");	
+}else if (getUrlVars()["site"]==2){
+document.write("ريال مدريد");	
+}
+switch (getUrlVars()["cat"]){
+case "news":
+document.write(" - الاخبار");	
+break;
+case "video":
+document.write(" - مقاطع الفيديو");
+break;
+case "images":
+document.write(" - الصور");
+break;	
+}
+</script></h2>
+</header>
+</section>
+<ul class="Items">
+<script>
+
+switch (getUrlVars()["cat"]){
+case "news":
+
+
+$(document).ready(function () {
+	$('#content').rssfeed('http://forkoora.com/rss.php?S='+getUrlVars()["site"]);
+});
+break;
+case "video":
+
+
+$(document).ready(function () {
+	$('#content').rssfeed('http://forkoora.com/rss_video11.php?S='+getUrlVars()["site"]);
+});
+
+break;
+case "images":
+
+$(document).ready(function () {
+	$('#content').rssfeed('http://forkoora.com/rss_img.php?S='+getUrlVars()["site"]);
+});
+
+break;	
+}
+
+
+</script>
+
+<div id="content" class="content"></div>
+<div id="placeholder"></div>
+</ul>
+</body>
+
